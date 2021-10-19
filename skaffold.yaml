@@ -33,14 +33,14 @@ build:
           - src: '/*.html'
             dest: .src
 
-    - image: yetiasg/multi-server
-      context: server
-      docker:
-        dockerfile: "Dockerfile.dev"
-      sync:
-        manual:
-          - src: '/*.js'
-            dest: .
+    # - image: yetiasg/multi-server
+    #   context: server
+    #   docker:
+    #     dockerfile: "Dockerfile.dev"
+    #   sync:
+    #     manual:
+    #       - src: '/*.js'
+    #         dest: .
 
     # - image: yetiasg/multi-worker
     #   context: worker
