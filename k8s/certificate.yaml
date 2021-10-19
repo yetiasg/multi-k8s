@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cherryvue-com-tls
+spec:
+  secretName: cherryvue-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: cherryvue.com
+  dnsNames:
+    - cherryvue.com
+    - www.cherryvue.com
